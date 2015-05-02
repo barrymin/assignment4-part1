@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('didspllay_errors',1);
-
+echo '<head><link rel="stylesheet" href="style2.css"></head>';
 $minnd=0;
 $maxnd=0;
 $miner=0;
@@ -77,10 +77,8 @@ function conditions () {
       echo "<td>$i";
 	  }
       for($j=($miner-1); $j <= $maxer; $j++){
-	
         if($i < $minnd && $j<$miner){
-          
-		  echo "<td>";
+      	  echo "<td>x";
           continue;
         }
         if($i< $minnd && $j>=$miner){

@@ -1,0 +1,7 @@
+Start: Fri, 1 May 2015 16:30:00
+End: Fri, 1 May 2015 17:26:03 -0700
+Tasks: worked on and finished the multiplication table in multtable.php
+
+Start: Thu, 30 Apr 2015 19:43:00
+End: Thu, 30 Apr 2015 23:59:16 -0700
+Tasks: created multable.php and wrote the part to check if get data was valid
