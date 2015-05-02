@@ -7,8 +7,6 @@ $maxnd=0;
 $miner=0;
 $maxer=0;
 
-echo var_dump($_GET);
-
 function conditions () {
   $check = 1;
   if(!isset($_GET['min-multiplicand'])){
@@ -31,7 +29,6 @@ function conditions () {
   if($check){
    	//check if input is numbers
     if(is_numeric($_GET['min-multiplicand'])){
-      echo "<P>hello im here</p>";
 	  $minnd = intval($_GET['min-multiplicand']);
     }
     else{
@@ -73,17 +70,31 @@ function conditions () {
   }
   //if all conditions passed check=1
   if(check){
-	echo "<table>";
-    for($i=$minnd; $i <= $maxnd; $i++){
+    echo "<table>";
+    for($i=($minnd - 1) ; $i <= $maxnd; $i++){
 	  echo "<tr>";
-	  echo "<td>".$i;
-	  for($j=$miner; $j <= $maxer; $j++){
-	    echo "<td>$j";
+	  if($i >= $minnd){
+      echo "<td>$i";
 	  }
-	}
+      for($j=($miner-1); $j <= $maxer; $j++){
+	
+        if($i < $minnd && $j<$miner){
+          
+		  echo "<td>";
+          continue;
+        }
+        if($i< $minnd && $j>=$miner){
+	      echo "<td> $j";
+          continue;
+	    }
+        if($j>=$miner){		
+	      echo "<td>".($j*$i);
+		}
+      }	
+    }
   }
 }
-
 conditions();
-
 ?>
+
+
