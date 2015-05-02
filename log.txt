@@ -1,3 +1,7 @@
+Start:Sat, 2 May 2015 15:59:00
+End: Sat, 2 May 2015 16:12:05 -0700
+Tasks: wrote and tested content2.php and created a link to content2.php in content1.php.
+
 Start: Sat, 2 May 2015 13:00:00
 End: Sat, 2 May 2015 15:33:15 -0700
 Tasks: created login.php content1.php content2.php. wrote and tested login.php and content1.php so a user can login and logout.
