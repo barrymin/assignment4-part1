@@ -12,8 +12,8 @@ if(session_status() == PHP_SESSION_ACTIVE){
   }
      if(isset($_SESSION["username"]) && isset($_SESSION["visits"])){
 	    $_SESSION["visits"]++;
-		echo "Hello $_SESSION[username], you have visited this page $_SESSION[visits] times before. Click <a href=\"login.php?logout\">here</a> to logout. \n";
-	
+		echo "<p>Hello $_SESSION[username], you have visited this page $_SESSION[visits] times before. Click <a href=\"login.php?logout\">here</a> to logout.</p>";
+        echo "Click <a href=\"content2.php\">here</a> to go to content2.</p>";
   }else{
     echo 'please enter a username and login <a href="login.php">here</a>';
   }
