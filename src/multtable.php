@@ -1,4 +1,19 @@
 <?php
+/**
+ * 
+ * A page that accepts 4 GET parameters that are numbers to generate 
+ * a multiplication table
+ *
+ * PHP version 5
+ *
+ * LICENSE: This source file is subject to version 3.01 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.php.net/license/3_01.txt.  If you did not receive a copy of
+ * the PHP License and are unable to obtain it through the web, please
+ * send a note to license@php.net so we can mail you a copy immediately.
+ *
+ * @author     Minna Barry
+ */
 error_reporting(E_ALL);
 ini_set('didspllay_errors',1);
 echo '<head><link rel="stylesheet" href="style2.css"></head>';
@@ -6,10 +21,9 @@ $minnd=0;
 $maxnd=0;
 $miner=0;
 $maxer=0;
-
 function conditions () {
     $check = 1;
-	//check for missing params
+    //check for missing params
     if (!isset($_GET['min-multiplicand'])) {
         echo '<P>min-multiplicand is missing</P>';
         $check = 0;
@@ -70,22 +84,26 @@ function conditions () {
             }
         }
     }
-  //if all conditions passed check=1
+    //if all conditions passed check=1
     if (check) {
-		//creating table
+        //create table
         echo "<table>";
+        //loop through rows
         for ($i=($minnd - 1) ; $i <= $maxnd; $i++) {
             echo "<tr>";
-            if($i >= $minnd){
+            if($i >= $minnd){    //to print first column after first row
                 echo "<td>$i";
             }
+            //loop through columns for evry row
             for ($j=($miner-1); $j <= $maxer; $j++) {
                 if ($i < $minnd && $j<$miner) {
+                    //print first empty cell
       	            echo "<td>x";
                     continue;
                 }
                 if ($i< $minnd && $j>=$miner) {
-                    echo "<td> $j";
+                    //print table header
+					echo "<td> $j";
                     continue;
                 }
                 if ($j>=$miner) {		
